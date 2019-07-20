@@ -1,0 +1,27 @@
+# file: .cpm_project.sh
+# decription: a file of cppproject_manager_centosv1.0 which is a simple cpp proector manager.
+#             usged to create cpp project
+# usage: sh .cpm_project.sh $project_name
+# author: freely
+# date: 2019.07.21
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+if [ "$#" -ne "1" ];
+then
+    echo "usage: sh .cpm_project.sh \$project_name"
+    exit 1
+fi
+mkdir $1 && cd $1
+mkdir source_files
+mkdir head_files
+mkdir obj_files
+mkdir release
+set="#!used for make\n\
+SOURCE_FILES=source_files\n\
+HEAD_FILES=head_files\n\
+OBJ_FILES=obj_files\n\
+RELEASE=release\n\
+CC=g++\n\
+CFLAG=-g -Wall -ansi\n\
+exe=$1.out"
+echo -e $set > .config
