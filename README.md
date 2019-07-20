@@ -15,3 +15,6 @@ You will find your execution file in release/
 
 ## Run Project
 sh .cpm_run $project_name
+
+#NOTE
+This script will be run correctly in kali sh shell. Not bash shell.
