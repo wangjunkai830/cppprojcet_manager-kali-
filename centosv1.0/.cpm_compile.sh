@@ -1,4 +1,4 @@
-# file: .compile.sh
+# file: .cpm_compile.sh
 # decription: a file of cppproject_manager_centos1.0 which is a simple cpp proector manager.
 #             usged to compile cpp project
 # usage: sh .cpm_compile.sh $project_name
