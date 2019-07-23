@@ -12,7 +12,7 @@ then
     exit 1
 fi
 cd $1
-test -e makefile && make && exit 0
+test -e makefile && make clean >> /dev/null && make && exit 0
 #rm -f makefile
 cat .config | sed '1d;$d' > makefile
 #RELEASE="$(cat .config | grep "RELEASE" | cut -d "=" -f 2)"
